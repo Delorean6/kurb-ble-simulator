@@ -1,0 +1,26 @@
+"""
+Kurb BLE UUIDs and event codes
+This file keeps all BLE constants in one place.
+"""
+
+# Primary Service UUID
+SERVICE_UUID = "e1b10000-1234-4abc-a001-1234567890ab"
+
+# Characteristic UUIDs
+CHAR_LOCK_STATE   = "e1b10001-1234-4abc-a001-1234567890ab"
+CHAR_LOCK_COMMAND = "e1b10002-1234-4abc-a001-1234567890ab"
+CHAR_SCHEDULE     = "e1b10003-1234-4abc-a001-1234567890ab"
+CHAR_TIMESYNC     = "e1b10004-1234-4abc-a001-1234567890ab"
+CHAR_BATTERY      = "e1b10005-1234-4abc-a001-1234567890ab"
+CHAR_NEXT_UNLOCK  = "e1b10006-1234-4abc-a001-1234567890ab"
+CHAR_EVENT        = "e1b10007-1234-4abc-a001-1234567890ab"
+
+# Event codes (as bytes)
+EV_LOCKED            = bytes([0x01])
+EV_UNLOCKED          = bytes([0x02])
+EV_OPEN_TOO_LONG     = bytes([0x04])
+EV_BATTERY_LOW       = bytes([0x05])
+EV_BATTERY_CRITICAL  = bytes([0x06])
+EV_SCHEDULE_UPDATED  = bytes([0x07])
+EV_GENERIC_ERROR     = bytes([0x08])
+EV_EMERGENCY_UNLOCK  = bytes([0x09])

@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  kurb-simulator:
+    build: .
+    container_name: kurb_sim
+    network_mode: host
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "src/main.py"]
